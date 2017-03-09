@@ -1,0 +1,25 @@
+<md-sidenav-container>
+
+  <md-sidenav #sidenav mode="side" class="app-sidenav">
+    <button md-raised-button>About</button>
+  </md-sidenav>
+
+
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button>
+
+    rapture!
+
+    <span class="app-toolbar-filler"></span>
+
+    <!--<li><a routerLink="/login" routerLinkActive="active">Login</a></li>-->
+    <button md-button (click)="signIn()">sign in</button>
+    <button md-button (click)="signUp()">sign up</button>
+  </md-toolbar>
+
+</md-sidenav-container>
+
+
+
