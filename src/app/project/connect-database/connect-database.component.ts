@@ -8,9 +8,15 @@ import {MdDialogRef,MdDialog} from "@angular/material";
 })
 export class ConnectDatabaseComponent implements OnInit {
 
-  title = 'app works!';
-  constructor(@Optional() public dialogRef: MdDialogRef<ConnectDatabaseComponent>) { }
+  //title = 'app works!';
 
+  public title: string;
+  public message: string;
+  constructor(public dialogRef: MdDialogRef<ConnectDatabaseComponent>) {}
+
+
+  // constructor(@Optional() public dialogRef: MdDialogRef<ConnectDatabaseComponent>) { }
+  //
   ngOnInit() {
     console.log("abc");
   }

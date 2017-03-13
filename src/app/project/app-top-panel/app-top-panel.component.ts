@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MdDialog} from "@angular/material";
 import {ConnectDatabaseComponent} from "../connect-database/connect-database.component";
+import {DialogsService} from "../shared/dialogs.service";
 
 @Component({
   selector: 'app-top-panel',
@@ -9,18 +10,27 @@ import {ConnectDatabaseComponent} from "../connect-database/connect-database.com
 })
 export class AppTopPanelComponent implements OnInit {
 
-  constructor(private _dialog: MdDialog) { }
+   public result: any;
+  constructor(private dialogsService: DialogsService) { }
 
-  lastDialogResult: string;
+  public databaseConnect() {
+    this.dialogsService
+      .confirm('Confirm Dialog', 'Are you sure you want to do this?')
+      .subscribe(res => this.result = res);
+  }
+
+  // constructor(private _dialog: MdDialog) { }
+  //
+  // lastDialogResult: string;
   ngOnInit() {
   }
-
-  databaseConnect() {
-    console.log("in app-top-panel");
-    let dialogRef = this._dialog.open(ConnectDatabaseComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      this.lastDialogResult = result;
-    })
-  }
+  //
+  // databaseConnect() {
+  //   console.log("in app-top-panel");
+  //   let dialogRef = this._dialog.open(ConnectDatabaseComponent);
+  //
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     this.lastDialogResult = result;
+  //   })
+  // }
 }
