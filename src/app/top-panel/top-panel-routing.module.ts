@@ -13,7 +13,7 @@ import {RegistrationComponent} from "../user/registration/registration.component
   imports: [
     RouterModule.forChild([
       { path: '',  component: LandingPageComponent },
-      // { path: 'login',  component: LoginComponent },
+      { path: 'login',  component: LoginComponent },
       // { path: 'register',  component: RegistrationComponent },
 
     ])

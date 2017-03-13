@@ -9,10 +9,14 @@ import 'hammerjs';
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import {TopPanelModule} from "./top-panel/top-panel.module";
+import {UserModule} from "./user/user.module";
+import { ProjectComponent } from './project/project.component';
+import {ProjectModule} from "./project/project.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +25,9 @@ import {TopPanelModule} from "./top-panel/top-panel.module";
     MaterialModule,
     RouterModule,
     AppRoutingModule,
-    TopPanelModule
+    TopPanelModule,
+    UserModule,
+    ProjectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

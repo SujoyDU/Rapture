@@ -7,13 +7,14 @@ import { RouterModule } from '@angular/router';
 import { LoginComponent }    from './login/login.component';
 //import { UserComponent }    from './user.component';
 import { RegistrationComponent }  from './registration/registration.component';
+import {ProjectComponent} from "../project/project.component";
 // import { LandingComponent } from './landing/landing.component';
 // import {ForgetPassComponent} from "./login/forget-pass/forget-pass.component";
 
 @NgModule({
   imports: [
     RouterModule.forChild([
-
+      { path: 'home',  component: ProjectComponent },
     ])
   ],
   exports: [

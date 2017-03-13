@@ -1,0 +1,26 @@
+<md-sidenav-container>
+
+  <md-sidenav #sidenav mode="side" class="app-sidenav">
+
+    <button md-raised-button (click)="databaseConnect()">Connect to Database</button>
+
+  </md-sidenav>
+
+
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button>
+
+    rapture!
+
+    <span class="app-toolbar-filler"></span>
+
+    <!--<li><a routerLink="/login" routerLinkActive="active">Login</a></li>-->
+    <button md-button>logout</button>
+  </md-toolbar>
+
+</md-sidenav-container>
+
+
+
