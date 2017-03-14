@@ -12,6 +12,8 @@ import {TopPanelModule} from "./top-panel/top-panel.module";
 import {UserModule} from "./user/user.module";
 import { ProjectComponent } from './project/project.component';
 import {ProjectModule} from "./project/project.module";
+import {AuthService} from "./user/login/shared/auth.service";
+import {LoggedInGuardService} from "./user/login/shared/logged-in-guard.service";
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import {ProjectModule} from "./project/project.module";
     UserModule,
     ProjectModule
   ],
-  providers: [],
+  providers: [ AuthService, LoggedInGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

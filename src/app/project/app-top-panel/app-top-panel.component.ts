@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MdDialog} from "@angular/material";
 import {ConnectDatabaseComponent} from "../connect-database/connect-database.component";
 import {DialogsService} from "../shared/dialogs.service";
+import {AuthService} from "../../user/login/shared/auth.service";
 
 @Component({
   selector: 'app-top-panel',
@@ -11,7 +12,7 @@ import {DialogsService} from "../shared/dialogs.service";
 export class AppTopPanelComponent implements OnInit {
 
    public result: any;
-  constructor(private dialogsService: DialogsService) { }
+  constructor(private dialogsService: DialogsService, private authService: AuthService) { }
 
   public databaseConnect() {
     this.dialogsService
@@ -23,6 +24,9 @@ export class AppTopPanelComponent implements OnInit {
   //
   // lastDialogResult: string;
   ngOnInit() {
+  }
+  logout() {
+    this.authService.logout();
   }
   //
   // databaseConnect() {
